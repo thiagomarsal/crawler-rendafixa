@@ -48,17 +48,17 @@ public class WebScraping {
     private RDB rdb;
 
     public void start() {
-//        cdb.process();
-//        cra.process();
-//        cri.process();
-//        debendure.process();
-//        dpge.process();
-//        fidc.process();
-//        lc.process();
-//        lca.process();
-//        lci.process();
-//        lf.process();
-//        rdb.process();
+        cdb.process();
+        cra.process();
+        cri.process();
+        debendure.process();
+        dpge.process();
+        fidc.process();
+        lc.process();
+        lca.process();
+        lci.process();
+        lf.process();
+        rdb.process();
         tesouroNacional.process();
     }
 }

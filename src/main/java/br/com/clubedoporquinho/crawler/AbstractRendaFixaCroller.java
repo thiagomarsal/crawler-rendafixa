@@ -1,5 +1,6 @@
 package br.com.clubedoporquinho.crawler;
 
+import br.com.clubedoporquinho.repository.TituloRendaFixaRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gargoylesoftware.htmlunit.WebClient;
 import org.slf4j.Logger;
@@ -20,6 +21,9 @@ public abstract class AbstractRendaFixaCroller implements Serializable {
 
     @Autowired
     protected RestTemplate restTemplate;
+
+    @Autowired
+    protected TituloRendaFixaRepository repository;
 
     public abstract void process();
 }

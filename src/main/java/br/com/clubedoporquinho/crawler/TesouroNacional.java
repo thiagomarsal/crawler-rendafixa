@@ -56,6 +56,7 @@ public class TesouroNacional extends AbstractRendaFixaCroller {
             }
 
             log.trace(titulo.toString());
+            repository.save(titulo);
         });
     }
 }

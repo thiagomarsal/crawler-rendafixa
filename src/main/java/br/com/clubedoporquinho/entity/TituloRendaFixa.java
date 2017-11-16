@@ -1,8 +1,18 @@
 package br.com.clubedoporquinho.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 
+@Entity
+@Table(name = "TITULO_RENDA_FIXA")
 public class TituloRendaFixa implements Serializable {
+
+    @Id
+    @GeneratedValue
+    private Long id;
 
     private String indexador;
 
@@ -23,6 +33,14 @@ public class TituloRendaFixa implements Serializable {
     private String liquidez;
 
     private String amortizacao;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getIndexador() {
         return indexador;
@@ -107,7 +125,8 @@ public class TituloRendaFixa implements Serializable {
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("TituloRendaFixa{");
-        sb.append("indexador='").append(indexador).append('\'');
+        sb.append("id=").append(id);
+        sb.append(", indexador='").append(indexador).append('\'');
         sb.append(", tipo='").append(tipo).append('\'');
         sb.append(", nome='").append(nome).append('\'');
         sb.append(", vendimento='").append(vendimento).append('\'');

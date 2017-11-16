@@ -39,10 +39,11 @@ public class DPGE extends AbstractRendaFixaCroller {
                     titulo.setLiquidez(node.get("liquidez").textValue());
                     titulo.setAmortizacao(node.get("amortizacao").textValue());
                     titulo.setVendimento(node.get("vencimento").textValue());
-                    titulo.setValor(node.get("preco").textValue());
+                    titulo.setValor(node.get("preco").asText());
                     titulo.setNome(titulo.getTipo() + " - " + titulo.getEmissor());
 
                     log.trace(titulo.toString());
+                    repository.save(titulo);
                 }
             }
         } catch (Exception e) {
